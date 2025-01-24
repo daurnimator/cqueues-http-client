@@ -553,8 +553,10 @@ local function new_from_uri(uri, protocols, headers)
 	self.key = new_key()
 	self.request.headers:append("sec-websocket-key", self.key, true)
 	self.request.headers:append("sec-websocket-version", "13")
-	for name, value, _ in headers:each() do
-		self.request.headers:append(name, value)
+	if(headers)then
+		for name, value, _ in headers:each() do
+			self.request.headers:append(name, value)
+		end
 	end
 	if protocols then
 		--[[ The request MAY include a header field with the name
