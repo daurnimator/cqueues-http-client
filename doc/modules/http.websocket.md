@@ -1,10 +1,11 @@
 ## http.websocket
 
-### `new_from_uri(uri, protocols)` <!-- --> {#http.websocket.new_from_uri}
+### `new_from_uri(uri, protocols, headers)` <!-- --> {#http.websocket.new_from_uri}
 
 Creates a new `http.websocket` object of type `"client"` from the given URI.
 
   - `protocols` (optional) should be a lua table containing a sequence of protocols to send to the server
+  - [`headers`](#http.headers) (optional) should be customs headers if needed.
 
 
 ### `new_from_stream(stream, headers)` <!-- --> {#http.websocket.new_from_stream}
